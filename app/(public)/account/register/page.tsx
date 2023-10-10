@@ -33,11 +33,11 @@ function Register() {
 
   return (
     <div className="card">
-      <h4 className="card-header">Register</h4>
+      <h4 className="card-header">Cadastro</h4>
       <div className="card-body">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
-            <label className="form-label">First Name</label>
+            <label className="form-label">Nome</label>
             <input
               {...fields.firstName}
               type="text"
@@ -48,7 +48,7 @@ function Register() {
             </div>
           </div>
           <div className="mb-3">
-            <label className="form-label">Last Name</label>
+            <label className="form-label">Sobrenome</label>
             <input
               {...fields.lastName}
               type="text"
@@ -59,7 +59,7 @@ function Register() {
             </div>
           </div>
           <div className="mb-3">
-            <label className="form-label">Username</label>
+            <label className="form-label">Usuário</label>
             <input
               {...fields.username}
               type="text"
@@ -70,7 +70,7 @@ function Register() {
             </div>
           </div>
           <div className="mb-3">
-            <label className="form-label">Password</label>
+            <label className="form-label">Senha</label>
             <input
               {...fields.password}
               type="password"
@@ -84,10 +84,10 @@ function Register() {
             {formState.isSubmitting && (
               <span className="spinner-border spinner-border-sm me-1"></span>
             )}
-            Register
+            Criar conta
           </button>
           <Link href="/account/login" className="btn btn-link">
-            Cancel
+            Cancelar
           </Link>
         </form>
       </div>
