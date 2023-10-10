@@ -21,5 +21,5 @@ function Edit({ params: { id } }: any) {
     userService.getById(id);
   }, [router]);
 
-  return user ? <AddEdit title="Edit User" user={user} /> : <Spinner />;
+  return user ? <AddEdit title="Editar Usuário" user={user} /> : <Spinner />;
 }
