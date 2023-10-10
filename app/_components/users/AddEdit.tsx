@@ -122,7 +122,7 @@ function AddEdit({ title, user }: { title: string; user?: any }) {
           {formState.isSubmitting && (
             <span className="spinner-border spinner-border-sm me-1"></span>
           )}
-          Save
+          Salvar
         </button>
         <button
           onClick={() => reset()}
@@ -130,10 +130,10 @@ function AddEdit({ title, user }: { title: string; user?: any }) {
           disabled={formState.isSubmitting}
           className="btn btn-secondary"
         >
-          Reset
+          Resetar Alterações
         </button>
         <Link href="/users" className="btn btn-link">
-          Cancel
+          Cancelar
         </Link>
       </div>
     </form>
