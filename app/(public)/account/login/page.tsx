@@ -29,7 +29,7 @@ function Login() {
       <div className="card-body">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
-            <label className="form-label">Username</label>
+            <label className="form-label">Usuário</label>
             <input
               {...fields.username}
               type="text"
@@ -40,7 +40,7 @@ function Login() {
             </div>
           </div>
           <div className="mb-3">
-            <label className="form-label">Password</label>
+            <label className="form-label">Senha</label>
             <input
               {...fields.password}
               type="password"
@@ -57,7 +57,7 @@ function Login() {
             Login
           </button>
           <Link href="/account/register" className="btn btn-link">
-            Register
+            Crie uma conta
           </Link>
         </form>
       </div>
