@@ -17,7 +17,7 @@ function Layout({ children }: { children: React.ReactNode }) {
         <div className="text-center mt-4">
           <p>
             <a href="https://mauromaio.vercel.app/" target="_blank">
-              Mauro Maio Dev
+              Mauro Maio Dev - Projetos
             </a>
           </p>
         </div>
