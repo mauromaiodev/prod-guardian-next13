@@ -34,7 +34,7 @@ function Nav() {
           {loggingOut ? (
             <span className="spinner-border spinner-border-sm"></span>
           ) : (
-            <span>Logout</span>
+            <span>Sair</span>
           )}
         </button>
       </div>
