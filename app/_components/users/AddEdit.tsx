@@ -26,7 +26,7 @@ function AddEdit({ title, user }: { title: string; user?: any }) {
     password: register("password", {
       minLength: {
         value: 6,
-        message: "Password must be at least 6 characters",
+        message: "Senha precisa ter no mínimo 6 caracteres",
       },
       // senha só só é obrigatória no modo adicionar
       validate: (value) =>
