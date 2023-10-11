@@ -19,10 +19,10 @@ function Register() {
     lastName: register("lastName", { required: "Last Name is required" }),
     username: register("username", { required: "Username is required" }),
     password: register("password", {
-      required: "Password is required",
+      required: "Senha é obrigatória",
       minLength: {
         value: 6,
-        message: "Password must be at least 6 characters",
+        message: "Senha deve conter no mínimo 6 caracteres",
       },
     }),
   };
