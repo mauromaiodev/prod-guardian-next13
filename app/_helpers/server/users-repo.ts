@@ -1,5 +1,5 @@
-import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
 import { headers } from "next/headers";
 import { db } from "./db";
 
@@ -25,7 +25,7 @@ async function authenticate({
   const user = await User.findOne({ username });
 
   if (!(user && bcrypt.compareSync(password, user.hash))) {
-    throw "Username or password is incorrect";
+    throw "Usuário ou senha inválidos";
   }
 
   // cria um token JWT valido por 7 dias
