@@ -1,8 +1,8 @@
-import { create } from "zustand";
 import { useRouter, useSearchParams } from "next/navigation";
+import { create } from "zustand";
 
-import { useAlertService } from "_services";
 import { useFetch } from "_helpers/client";
+import { useAlertService } from "_services";
 
 export { useUserService };
 
@@ -48,7 +48,7 @@ function useUserService(): IUserService {
     register: async (user) => {
       try {
         await fetch.post("/api/account/register", user);
-        alertService.success("Registration successful", true);
+        alertService.success("Cadastro feito com sucesso!", true);
         router.push("/account/login");
       } catch (error: any) {
         alertService.error(error);
