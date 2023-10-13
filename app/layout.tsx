@@ -13,7 +13,6 @@ function Layout({ children }: { children: React.ReactNode }) {
       <body>
         {children}
 
-        {/* credits */}
         <div className="text-center mt-4">
           <p>
             <a href="https://mauromaio.vercel.app/" target="_blank">
