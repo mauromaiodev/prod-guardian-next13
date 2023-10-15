@@ -22,7 +22,7 @@ Desenvolver sistema para gerenciamento de produtos e fornecedores com autentica�
 - Autenticação via JWT, criptografia com bcrypt, Next-Auth pra quem for usar next é uma opção também.
 - Secret Keys e URI's não poderão estar públicas.
 - Uso de MongoDB (MongoDB Compass) ou PostgreSQL (Supabase).
-- Uso obrigatório de Tailwind CSS.
+- Uso obrigatório de Tailwind CSS e/ou Bootstrap.
 - Uso obrigatório de TypeScript.
 
 ## Stack Tecnológica
