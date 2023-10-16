@@ -15,8 +15,10 @@ function Login() {
   const { errors } = formState;
 
   const fields = {
-    username: register("username", { required: "Username is required" }),
-    password: register("password", { required: "Password is required" }),
+    username: register("username", {
+      required: "Nome de usuário é obrigatório",
+    }),
+    password: register("password", { required: "Senha é obrigatória" }),
   };
 
   async function onSubmit({ username, password }: any) {
