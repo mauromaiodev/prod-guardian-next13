@@ -1,7 +1,7 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 
 import { useAlertService, useUserService } from "_services";
@@ -20,9 +20,11 @@ function AddEdit({ title, user }: { title: string; user?: any }) {
   const { errors } = formState;
 
   const fields = {
-    firstName: register("firstName", { required: "First Name is required" }),
-    lastName: register("lastName", { required: "Last Name is required" }),
-    username: register("username", { required: "Username is required" }),
+    firstName: register("firstName", { required: "Nome é obrigatório" }),
+    lastName: register("lastName", { required: "Sobrenome é obrigatório" }),
+    username: register("username", {
+      required: "Nome de usuário é obrigatório",
+    }),
     password: register("password", {
       minLength: {
         value: 6,
@@ -30,7 +32,7 @@ function AddEdit({ title, user }: { title: string; user?: any }) {
       },
       // senha só só é obrigatória no modo adicionar
       validate: (value) =>
-        !user && !value ? "Password is required" : undefined,
+        !user && !value ? "Senha é obrigatória" : undefined,
     }),
   };
 
