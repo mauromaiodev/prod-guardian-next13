@@ -63,7 +63,7 @@ async function getCurrent() {
 async function create(params: any) {
   // validar
   if (await User.findOne({ username: params.username })) {
-    throw 'Username "' + params.username + '" is already taken';
+    throw 'Usuário "' + params.username + '" já cadastrado';
   }
 
   const user = new User(params);
