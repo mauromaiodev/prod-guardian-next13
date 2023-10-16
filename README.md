@@ -1,7 +1,3 @@
-# prod-guardian-next13
-
-Next 13 / App Router / MongoDB
-
 # Projeto para treinar conceitos lógicos/técnicos em Desenvolvimento de Software
 
 ## Objetivo
