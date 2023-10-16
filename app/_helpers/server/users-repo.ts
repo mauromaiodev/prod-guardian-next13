@@ -47,7 +47,7 @@ async function getById(id: string) {
   try {
     return await User.findById(id);
   } catch {
-    throw "User Not Found";
+    throw "Usuário não encontrado";
   }
 }
 
