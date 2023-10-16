@@ -63,7 +63,7 @@ async function getCurrent() {
 async function create(params: any) {
   // validar
   if (await User.findOne({ username: params.username })) {
-    throw 'Usuário "' + params.username + '" já cadastrado';
+    throw 'Username "' + params.username + '" is already taken';
   }
 
   const user = new User(params);
@@ -86,7 +86,7 @@ async function update(id: string, params: any) {
     user.username !== params.username &&
     (await User.findOne({ username: params.username }))
   ) {
-    throw 'Username "' + params.username + '" is already taken';
+    throw 'Nome de usuário "' + params.username + '" já está em uso';
   }
 
   // hash na senha se ela for digitada
