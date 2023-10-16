@@ -15,9 +15,11 @@ function Register() {
   const { errors } = formState;
 
   const fields = {
-    firstName: register("firstName", { required: "First Name is required" }),
-    lastName: register("lastName", { required: "Last Name is required" }),
-    username: register("username", { required: "Username is required" }),
+    firstName: register("firstName", { required: "Nome é obrigatório" }),
+    lastName: register("lastName", { required: "Sobrenome é obrigatório" }),
+    username: register("username", {
+      required: "Nome de usuário é obrigatório",
+    }),
     password: register("password", {
       required: "Senha é obrigatória",
       minLength: {
