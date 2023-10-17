@@ -116,6 +116,7 @@ interface IUser {
   lastName: string;
   username: string;
   password: string;
+  role: string;
   isDeleting?: boolean;
 }
 
