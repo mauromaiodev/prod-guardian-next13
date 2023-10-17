@@ -26,8 +26,9 @@ function Users() {
         <thead>
           <tr>
             <th style={{ width: "30%" }}>Nome</th>
-            <th style={{ width: "30%" }}>Sobrenome</th>
-            <th style={{ width: "30%" }}>Nome de usuário</th>
+            <th style={{ width: "20%" }}>Sobrenome</th>
+            <th style={{ width: "20%" }}>Nome de usuário</th>
+            <th style={{ width: "20%" }}>Cargo</th>
             <th style={{ width: "10%" }}></th>
           </tr>
         </thead>
@@ -45,6 +46,7 @@ function Users() {
           <td>{user.firstName}</td>
           <td>{user.lastName}</td>
           <td>{user.username}</td>
+          <td>{user.role}</td>
           <td style={{ whiteSpace: "nowrap" }}>
             <Link
               href={`/users/edit/${user.id}`}
