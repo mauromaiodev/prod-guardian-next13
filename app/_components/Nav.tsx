@@ -23,7 +23,7 @@ function Nav() {
           Home
         </NavLink>
         <NavLink href="/users" className="nav-item nav-link">
-          Fornecedores
+          Usuários
         </NavLink>
         <button
           onClick={logout}
