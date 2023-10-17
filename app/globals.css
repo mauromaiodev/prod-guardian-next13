@@ -1,3 +1,7 @@
 .app-container {
-    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
+    justify-content: space-between;
 }
