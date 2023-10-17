@@ -31,7 +31,7 @@ update.schema = joi.object({
 async function _delete(req: Request, { params: { id } }: any) {
   await usersRepo.delete(id);
 
-  // logout automático se o usuário se deletar
+  // logout automático do sistema se o usuário se deletar
   if (id === req.headers.get("userId")) {
     cookies().delete("authorization");
     return { deletedSelf: true };
