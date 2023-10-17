@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { useEffect } from "react";
 
-import { useUserService } from "_services";
 import { Spinner } from "_components";
+import { useUserService } from "_services";
 
 export default Home;
 
@@ -25,7 +25,7 @@ function Home() {
           produtos e fornecedores :D
         </p>
         <p>
-          <Link href="/users">Gerenciar Fornecedores</Link>
+          <Link href="/users">Gerenciar Usuários</Link>
         </p>
       </>
     );
