@@ -2,8 +2,8 @@ import joi from "joi";
 
 import { cookies } from "next/headers";
 
-import { apiHandler } from "_helpers/server/api";
 import { usersRepo } from "_helpers/server";
+import { apiHandler } from "_helpers/server/api";
 
 module.exports = apiHandler({
   GET: getById,
@@ -25,6 +25,7 @@ update.schema = joi.object({
   lastName: joi.string(),
   username: joi.string(),
   password: joi.string().min(6).allow(""),
+  role: joi.string(),
 });
 
 async function _delete(req: Request, { params: { id } }: any) {
