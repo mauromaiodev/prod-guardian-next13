@@ -34,6 +34,7 @@ function AddEdit({ title, user }: { title: string; user?: any }) {
       validate: (value) =>
         !user && !value ? "Senha é obrigatória" : undefined,
     }),
+    role: register("role", { required: "Cargo é obrigatório" }),
   };
 
   async function onSubmit(data: any) {
@@ -112,6 +113,24 @@ function AddEdit({ title, user }: { title: string; user?: any }) {
           />
           <div className="invalid-feedback">
             {errors.password?.message?.toString()}
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="mb-3 col">
+          <label className="form-label">Cargo</label>
+          <select
+            {...fields.role}
+            className={`form-select ${errors.role ? "is-invalid" : ""}`}
+          >
+            <option selected value="">
+              Selecione um cargo
+            </option>
+            <option value="Admin">Admin</option>
+            <option value="User">User</option>
+          </select>
+          <div className="invalid-feedback">
+            {errors.role?.message?.toString()}
           </div>
         </div>
       </div>
