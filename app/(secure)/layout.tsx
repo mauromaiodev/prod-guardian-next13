@@ -1,8 +1,8 @@
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 
-import { auth } from "_helpers/server";
 import { Alert, Nav } from "_components";
+import { auth } from "_helpers/server";
 
 export default Layout;
 
@@ -19,6 +19,13 @@ function Layout({ children }: { children: React.ReactNode }) {
       <Alert />
       <div className="p-4">
         <div className="container">{children}</div>
+      </div>
+      <div className="text-center bg-dark p-2">
+        <p>
+          <a href="https://mauromaio.vercel.app/" target="_blank">
+            Mauro Maio Dev - Projetos
+          </a>
+        </p>
       </div>
     </div>
   );
