@@ -126,8 +126,8 @@ function AddEdit({ title, user }: { title: string; user?: any }) {
             <option selected value="">
               Selecione um cargo
             </option>
-            <option value="Admin">Admin</option>
-            <option value="User">User</option>
+            <option value="ADMIN">ADMIN</option>
+            <option value="USER">USER</option>
           </select>
           <div className="invalid-feedback">
             {errors.role?.message?.toString()}
