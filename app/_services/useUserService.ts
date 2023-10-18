@@ -46,6 +46,7 @@ function useUserService(): IUserService {
       router.push("/account/login");
     },
     register: async (user) => {
+      user.role = "USER";
       try {
         await fetch.post("/api/account/register", user);
         alertService.success("Cadastro feito com sucesso!", true);
