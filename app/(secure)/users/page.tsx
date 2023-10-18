@@ -11,6 +11,11 @@ export default Users;
 function Users() {
   const userService = useUserService();
   const users = userService.users;
+  const user = userService.currentUser;
+
+  if (user && user.role !== "ADMIN") {
+    throw new Error("Você precisa ser ADMIN!");
+  }
 
   useEffect(() => {
     userService.getAll();
