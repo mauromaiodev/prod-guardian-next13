@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect } from "react";
 
 import { Spinner } from "_components";
@@ -23,9 +22,6 @@ function Home() {
         <p>
           Bem vindo(a) ao ProdGuardian, seu sistema para gerenciamento de
           produtos e fornecedores :D
-        </p>
-        <p>
-          <Link href="/users">Gerenciar Usuários</Link>
         </p>
       </>
     );
