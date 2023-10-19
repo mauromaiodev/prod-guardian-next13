@@ -19,6 +19,7 @@ function Users() {
 
   useEffect(() => {
     userService.getAll();
+    userService.getCurrent();
   }, []);
 
   return (
