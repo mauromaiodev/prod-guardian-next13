@@ -10,6 +10,7 @@ export { Nav };
 function Nav() {
   const [loggingOut, setLoggingOut] = useState<boolean>(false);
   const userService = useUserService();
+  const user = userService.currentUser;
 
   async function logout() {
     setLoggingOut(true);
@@ -22,9 +23,11 @@ function Nav() {
         <NavLink href="/" exact className="nav-item nav-link">
           Home
         </NavLink>
-        <NavLink href="/users" className="nav-item nav-link">
-          Usuários
-        </NavLink>
+        {user?.role === "ADMIN" && (
+          <NavLink href="/users" className="nav-item nav-link">
+            Usuários
+          </NavLink>
+        )}
         <button
           onClick={logout}
           className="btn btn-link nav-item nav-link"
