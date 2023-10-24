@@ -25,7 +25,7 @@ function Users() {
   return (
     <>
       <h1>Usuários</h1>
-      <Link href="/users/add" className="btn btn-sm btn-success mb-2">
+      <Link href="/users/add" className="btn btn-sm btn-success mb-3">
         Adicionar Usuário
       </Link>
       <table className="table table-striped">
