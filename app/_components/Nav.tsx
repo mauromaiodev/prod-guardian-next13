@@ -24,9 +24,14 @@ function Nav() {
           Home
         </NavLink>
         {user?.role === "ADMIN" && (
-          <NavLink href="/users" className="nav-item nav-link">
-            Usuários
-          </NavLink>
+          <>
+            <NavLink href="/users" className="nav-item nav-link">
+              Usuários
+            </NavLink>
+            <NavLink href="/suppliers" className="nav-item nav-link">
+              Fornecedores
+            </NavLink>
+          </>
         )}
         <button
           onClick={logout}
